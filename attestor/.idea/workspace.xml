@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="921e2986-1c9e-40fe-a639-65c718f20110" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ui/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ui/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui/src/components/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ui/src/components/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/data/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/config.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
