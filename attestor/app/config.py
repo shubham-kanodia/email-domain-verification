@@ -14,3 +14,5 @@ class Config:
 
     contract_address = source.get("signing.contract_address")
     chain_id = source.get("signing.chain_id")
+
+    email_api_key = os.getenv("SENDGRID_EMAIL_API_KEY")

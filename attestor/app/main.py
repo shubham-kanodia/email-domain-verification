@@ -28,5 +28,8 @@ async def root():
 
 @app.post("/attest")
 async def attest(attestation_input: AttestationInput):
-    print(attestation_input)
-    return {"message": f"Welcome to HenceProved"}
+    email_domain = attestation_input.email_address.split("@")[-1]
+    signature = signing_utils.sign(email_domain, attestation_input.ethereum_address)
+    return {
+        "confirmation_link": f"http://localhost:3000/verify/{signature}/{email_domain}/{attestation_input.ethereum_address}"
+    }
