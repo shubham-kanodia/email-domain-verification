@@ -1,0 +1,9 @@
+fastapi==0.61.1
+uvicorn==0.12.1
+pydantic==1.6.1
+web3==5.30.0
+envyaml
+python-jose[cryptography]
+passlib[bcrypt]
+
+python-dotenv==0.14.0
