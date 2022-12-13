@@ -5,6 +5,9 @@ import "@openzeppelin/contracts/access/AccessControl.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/utils/cryptography/draft-EIP712.sol";
 import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
+import "@openzeppelin/contracts/utils/Base64.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
+
 
 contract EmailDomainVerificationToken is ERC721Enumerable, EIP712, AccessControl {
     using Strings for uint256;
@@ -31,7 +34,7 @@ contract EmailDomainVerificationToken is ERC721Enumerable, EIP712, AccessControl
         _setupRole(MINTER_ROLE, _minter);
     }
 
-    function supportsInterface(bytes4 interfaceId) public view virtual override(ERC721, AccessControl) returns (bool) {
+    function supportsInterface(bytes4 interfaceId) public view virtual override(ERC721Enumerable, AccessControl) returns (bool) {
         return super.supportsInterface(interfaceId);
     }
 
@@ -64,10 +67,10 @@ contract EmailDomainVerificationToken is ERC721Enumerable, EIP712, AccessControl
         return ECDSA.recover(digest, signature);
     }
 
-    function tokenURI(uint256 tokenId) override public view returns (string memory) {
+    function tokenURI(uint256 _tokenId) override public view returns (string memory) {
         string[19] memory parts;
         parts[0] = '<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 100 100"><g><rect x="0" y="0" width="100" height="100" fill="red"></rect><text x="10" y="50" font-family="Verdana" font-size="10" fill="blue">@';
-        parts[1] = emailDomains[tokenId];
+        parts[1] = emailDomains[_tokenId];
         parts[2] = '</text></g></svg>';
 
         string memory output = string(abi.encodePacked(parts[0], parts[1], parts[2]));
